@@ -40,9 +40,15 @@
             this.txtSistematicos = new System.Windows.Forms.TextBox();
             this.cmbAsignatutas = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAgregarNotas = new System.Windows.Forms.Button();
             this.groupBoxEstudiante = new System.Windows.Forms.GroupBox();
             this.groupBoxNotas = new System.Windows.Forms.GroupBox();
+            this.ColumnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnApellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCarnet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDepartamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnMunicipio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBoxEstudiante.SuspendLayout();
             this.groupBoxNotas.SuspendLayout();
@@ -93,6 +99,7 @@
             this.btnAgregar.TabIndex = 5;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // txtTareaCurso
             // 
@@ -100,6 +107,7 @@
             this.txtTareaCurso.Name = "txtTareaCurso";
             this.txtTareaCurso.Size = new System.Drawing.Size(132, 20);
             this.txtTareaCurso.TabIndex = 9;
+            this.txtTareaCurso.Visible = false;
             // 
             // txtSegundoParcial
             // 
@@ -107,6 +115,7 @@
             this.txtSegundoParcial.Name = "txtSegundoParcial";
             this.txtSegundoParcial.Size = new System.Drawing.Size(132, 20);
             this.txtSegundoParcial.TabIndex = 8;
+            this.txtSegundoParcial.Visible = false;
             // 
             // txtPrimerParcial
             // 
@@ -114,6 +123,7 @@
             this.txtPrimerParcial.Name = "txtPrimerParcial";
             this.txtPrimerParcial.Size = new System.Drawing.Size(132, 20);
             this.txtPrimerParcial.TabIndex = 7;
+            this.txtPrimerParcial.Visible = false;
             // 
             // txtSistematicos
             // 
@@ -121,6 +131,7 @@
             this.txtSistematicos.Name = "txtSistematicos";
             this.txtSistematicos.Size = new System.Drawing.Size(132, 20);
             this.txtSistematicos.TabIndex = 6;
+            this.txtSistematicos.Visible = false;
             // 
             // cmbAsignatutas
             // 
@@ -138,25 +149,36 @@
             this.cmbAsignatutas.Name = "cmbAsignatutas";
             this.cmbAsignatutas.Size = new System.Drawing.Size(132, 21);
             this.cmbAsignatutas.TabIndex = 12;
+            this.cmbAsignatutas.Visible = false;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnID,
+            this.ColumnNombres,
+            this.ColumnApellidos,
+            this.ColumnCarnet,
+            this.ColumnDepartamento,
+            this.ColumnMunicipio});
             this.dataGridView1.Location = new System.Drawing.Point(533, 49);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(926, 244);
             this.dataGridView1.TabIndex = 14;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
-            // button1
+            // btnAgregarNotas
             // 
-            this.button1.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Blue;
-            this.button1.Location = new System.Drawing.Point(69, 212);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 48);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Agregar Notas";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAgregarNotas.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarNotas.ForeColor = System.Drawing.Color.Blue;
+            this.btnAgregarNotas.Location = new System.Drawing.Point(69, 212);
+            this.btnAgregarNotas.Name = "btnAgregarNotas";
+            this.btnAgregarNotas.Size = new System.Drawing.Size(96, 48);
+            this.btnAgregarNotas.TabIndex = 15;
+            this.btnAgregarNotas.Text = "Agregar Notas";
+            this.btnAgregarNotas.UseVisualStyleBackColor = true;
+            this.btnAgregarNotas.Visible = false;
+            this.btnAgregarNotas.Click += new System.EventHandler(this.BtnAgregarNotas_Click);
             // 
             // groupBoxEstudiante
             // 
@@ -175,7 +197,7 @@
             // 
             // groupBoxNotas
             // 
-            this.groupBoxNotas.Controls.Add(this.button1);
+            this.groupBoxNotas.Controls.Add(this.btnAgregarNotas);
             this.groupBoxNotas.Controls.Add(this.txtSistematicos);
             this.groupBoxNotas.Controls.Add(this.txtPrimerParcial);
             this.groupBoxNotas.Controls.Add(this.txtSegundoParcial);
@@ -187,6 +209,37 @@
             this.groupBoxNotas.TabIndex = 17;
             this.groupBoxNotas.TabStop = false;
             this.groupBoxNotas.Text = "Registro de Notas";
+            this.groupBoxNotas.Visible = false;
+            // 
+            // ColumnID
+            // 
+            this.ColumnID.HeaderText = "ID";
+            this.ColumnID.Name = "ColumnID";
+            // 
+            // ColumnNombres
+            // 
+            this.ColumnNombres.HeaderText = "Nombres";
+            this.ColumnNombres.Name = "ColumnNombres";
+            // 
+            // ColumnApellidos
+            // 
+            this.ColumnApellidos.HeaderText = "Apellidos";
+            this.ColumnApellidos.Name = "ColumnApellidos";
+            // 
+            // ColumnCarnet
+            // 
+            this.ColumnCarnet.HeaderText = "Carnet";
+            this.ColumnCarnet.Name = "ColumnCarnet";
+            // 
+            // ColumnDepartamento
+            // 
+            this.ColumnDepartamento.HeaderText = "Departamento";
+            this.ColumnDepartamento.Name = "ColumnDepartamento";
+            // 
+            // ColumnMunicipio
+            // 
+            this.ColumnMunicipio.HeaderText = "Municipio";
+            this.ColumnMunicipio.Name = "ColumnMunicipio";
             // 
             // RegistroDatos
             // 
@@ -221,8 +274,14 @@
         private System.Windows.Forms.TextBox txtSistematicos;
         private System.Windows.Forms.ComboBox cmbAsignatutas;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAgregarNotas;
         private System.Windows.Forms.GroupBox groupBoxEstudiante;
         private System.Windows.Forms.GroupBox groupBoxNotas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNombres;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnApellidos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCarnet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDepartamento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMunicipio;
     }
 }
