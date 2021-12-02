@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Downloads\\SegundoExamen-main\\Domain\\Domain.csproj": {}
+    "E:\\Downloads\\SegundoExamen\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "E:\\Downloads\\SegundoExamen-main\\Domain\\Domain.csproj": {
+    "E:\\Downloads\\SegundoExamen\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Downloads\\SegundoExamen-main\\Domain\\Domain.csproj",
+        "projectUniqueName": "E:\\Downloads\\SegundoExamen\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "E:\\Downloads\\SegundoExamen-main\\Domain\\Domain.csproj",
+        "projectPath": "E:\\Downloads\\SegundoExamen\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\JADPA_19\\.nuget\\packages\\",
-        "outputPath": "E:\\Downloads\\SegundoExamen-main\\Domain\\obj\\",
+        "outputPath": "E:\\Downloads\\SegundoExamen\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -41,6 +41,10 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "Autofac": {
+              "target": "Package",
+              "version": "[6.3.0, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",

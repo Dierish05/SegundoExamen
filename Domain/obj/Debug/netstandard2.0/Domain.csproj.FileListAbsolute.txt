@@ -6,3 +6,12 @@ E:\Downloads\SegundoExamen-main\Domain\bin\Debug\netstandard2.0\Domain.dll
 E:\Downloads\SegundoExamen-main\Domain\bin\Debug\netstandard2.0\Domain.pdb
 E:\Downloads\SegundoExamen-main\Domain\obj\Debug\netstandard2.0\Domain.dll
 E:\Downloads\SegundoExamen-main\Domain\obj\Debug\netstandard2.0\Domain.pdb
+E:\Downloads\SegundoExamen\Domain\bin\Debug\netstandard2.0\Domain.deps.json
+E:\Downloads\SegundoExamen\Domain\bin\Debug\netstandard2.0\Domain.dll
+E:\Downloads\SegundoExamen\Domain\bin\Debug\netstandard2.0\Domain.pdb
+E:\Downloads\SegundoExamen\Domain\obj\Debug\netstandard2.0\Domain.csprojAssemblyReference.cache
+E:\Downloads\SegundoExamen\Domain\obj\Debug\netstandard2.0\Domain.csproj.CoreCompileInputs.cache
+E:\Downloads\SegundoExamen\Domain\obj\Debug\netstandard2.0\Domain.AssemblyInfoInputs.cache
+E:\Downloads\SegundoExamen\Domain\obj\Debug\netstandard2.0\Domain.AssemblyInfo.cs
+E:\Downloads\SegundoExamen\Domain\obj\Debug\netstandard2.0\Domain.dll
+E:\Downloads\SegundoExamen\Domain\obj\Debug\netstandard2.0\Domain.pdb

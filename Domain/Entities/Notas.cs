@@ -9,6 +9,8 @@ namespace Domain.Entities
     {
         public Asignaturas Asignaturas { get; set; }
         public Estudiante Estudiante { get; set; }
+
+        public List<Asignatura> Asignatura { get; set; }
         public int Sistematicos { get; set; }
         public int IParcial {get; set;}
         public int IIParcial { get; set; }
